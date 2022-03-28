@@ -14,8 +14,8 @@
          android:layout_height="wrap_content"
          android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-         <include android:id="@+id/actionbar"
-             layout="@layout/actionbar"></include>
+         <!--include android:id="@+id/actionbar"
+             layout="@layout/actionbar"></include-->
 
          <com.google.android.material.tabs.TabLayout
              android:id="@+id/tabLayout"

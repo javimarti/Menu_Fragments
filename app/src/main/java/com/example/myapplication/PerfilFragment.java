@@ -71,9 +71,10 @@ public class PerfilFragment extends Fragment {
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         perfilmascotas.setLayoutManager(llm);
+
         inicializarPerfil();
         inicializarAdaptador();
-
+        setHasOptionsMenu(true);
         return v;
     }
 

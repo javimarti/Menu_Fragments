@@ -40,12 +40,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-         actionBar =(Toolbar) findViewById(R.layout.actionbar);
+        // actionBar =(Toolbar) findViewById(R.layout.actionbar);
         tabLayout =(TabLayout) findViewById(R.id.tabLayout);
         viewPager =(ViewPager) findViewById(R.id.viewpager);
 
-       setSupportActionBar((Toolbar) actionBar);
-       setUpViewPager();
+
+      //  setSupportActionBar(actionBar);
+
+        setUpViewPager();
+
         /*
         ArrayList <MascotasDto> mascotas= new ArrayList<MascotasDto>();
          listmascotas = (RecyclerView) findViewById(R.id.rvMascotas);
@@ -105,7 +108,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_opciones,menu);
-        return true;
+        return super.onCreateOptionsMenu(menu);
+
     }
 
     @Override
@@ -113,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent;
         switch (item.getItemId()){
             case R.id.contacto:
-                 intent = new Intent(MainActivity.this,FavoritiesActivity.class );
+                 intent = new Intent(MainActivity.this,ComentarioActivity.class );
                         startActivity(intent);
                 break;
             case R.id.acercade:

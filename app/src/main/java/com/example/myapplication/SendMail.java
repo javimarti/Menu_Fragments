@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Config;
+import android.util.Log;
 import android.widget.Toast;
 
 import java.util.Properties;
@@ -25,7 +26,7 @@ public class SendMail extends AsyncTask <Void,Void,Void>{
     private String subject;
     private String message;
     private ProgressDialog progressDialog;
-    public SendMail(Context context, String email, String subject, String message){
+    public SendMail( String email, String subject, String message){
         this.context = context;
         this.email = email;
         this.subject = subject;
@@ -37,16 +38,28 @@ public class SendMail extends AsyncTask <Void,Void,Void>{
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        progressDialog = ProgressDialog.show(context,"Sending message","Please wait...",false,false);
+      //  progressDialog = ProgressDialog.show(context,"Sending message","Please wait...",false,false);
     }
     @Override
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
-        progressDialog.dismiss();
-        Toast.makeText(context,"Message Sent",Toast.LENGTH_LONG).show();
+   //     progressDialog.dismiss();
+    //    Toast.makeText(context,"Message Sent",Toast.LENGTH_LONG).show();
     }
     @Override
     protected Void doInBackground(Void... params) {
+
+
+        try {
+            GMailSender sender = new GMailSender("jav.mart222@gmail.com", "password");
+            sender.sendMail("This is Subject",
+                    this.message,
+                    "jav.mart222@gmail.com",
+                    this.email);
+        } catch (Exception e) {
+            Log.e("SendMail", e.getMessage(), e);
+        }
+/*
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
         props.put("mail.smtp.socketFactory.port", "465");
@@ -68,7 +81,7 @@ public class SendMail extends AsyncTask <Void,Void,Void>{
         }
         catch (MessagingException e) {
             e.printStackTrace();
-        }
+        }*/
         return null;
     }
 }

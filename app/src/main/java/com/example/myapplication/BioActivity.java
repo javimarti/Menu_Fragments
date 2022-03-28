@@ -1,11 +1,12 @@
 package com.example.myapplication;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class BioActivity extends AppCompatActivity {
+public class BioActivity extends Activity {
 
     @SuppressLint("ResourceType")
     @Override

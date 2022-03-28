@@ -8,7 +8,7 @@ public class PerfilMascotasDto implements Serializable {
         this.petImgPerfil=petImgPerfil;
       // this.boneImg=boneImg;
         this.petName=petName;
-
+ 
     }
     private   int petImgPerfil;
 

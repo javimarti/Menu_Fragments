@@ -7,8 +7,8 @@
         android:id="@+id/bio"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Nombre"
-        android:gravity="right"
-        android:text="Javier"/>
+        android:hint="Nombre"
+        android:gravity="center"
+        android:text="Javier Martinez-Bio Desarrollador"/>
 
 </LinearLayout>

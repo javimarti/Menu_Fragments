@@ -4,13 +4,13 @@
     android:layout_height="match_parent">
 
 
-    <include android:id="@+id/actionbar"
+    <!--include android:id="@+id/actionbar"
         layout="@layout/favoritesactionbar"
-        ></include>
+        ></include-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMascotas"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/actionbar"/>
+        android:layout_height="match_parent"/>
+       <!-- android:layout_below="@id/actionbar"-->
 </RelativeLayout>

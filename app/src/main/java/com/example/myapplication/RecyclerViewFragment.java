@@ -23,9 +23,6 @@ public class RecyclerViewFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         // return super.onCreateView(inflater, container, savedInstanceState);
-
-
-
         CardView mCardView;
         View v = inflater.inflate(R.layout.fragment_recycler, container, false);
 
@@ -34,6 +31,7 @@ public class RecyclerViewFragment extends Fragment {
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         listmascotas.setLayoutManager(llm);
+        setHasOptionsMenu(true);
         inicializarListMascotas();
         inicializarAdaptador();
 
@@ -58,4 +56,6 @@ public class RecyclerViewFragment extends Fragment {
         mascotas.add(new MascotasDto(R.drawable.pet48,"Morita",R.drawable.bonesvg,"0",R.mipmap.bonelike48));
 
     }
+
+
 }

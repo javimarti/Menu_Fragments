@@ -47,7 +47,7 @@ class FormularioActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                SendMail sm = new SendMail(FormularioActivity.this, correo.getText().toString(), "Coursera", mensaje.getText().toString());
+                SendMail sm = new SendMail( correo.getText().toString(), "Coursera", mensaje.getText().toString());
                 sm.execute();
             }
         });

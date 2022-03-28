@@ -27,6 +27,8 @@ public class MascotasAdaptador extends RecyclerView.Adapter<MascotasAdaptador.Ma
 
     }
 
+    
+
     @NonNull
     @Override
     public MascotasViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

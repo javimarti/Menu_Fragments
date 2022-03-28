@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -13,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class FavoritiesActivity extends AppCompatActivity {
+public class FavoritiesActivity extends Activity {
     ArrayList<MascotasDto> mascotas;
     RecyclerView listmascotas;
     MascotasAdaptador adaptador;
@@ -26,9 +27,9 @@ public class FavoritiesActivity extends AppCompatActivity {
         int likeArray[] = new int[5];
         super.onCreate(savedInstanceState);
         setContentView(R.layout.favoritieslayout);
-        Toolbar actionBar =(Toolbar) findViewById(R.layout.favoritesactionbar);
+       // Toolbar actionBar =(Toolbar) findViewById(R.layout.favoritesactionbar);
 
-        setSupportActionBar((Toolbar) actionBar);
+       // setSupportActionBar((Toolbar) actionBar);
 
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
